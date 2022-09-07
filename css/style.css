@@ -451,8 +451,59 @@ th:last-child{
 	*{
     margin: 0;
     padding: 0;
+		box-sizing: border-box;;
+		font-family: 'Poppins', sans-serif;
+	}
+.rate{
+width: 100%;
+height: 100vh;
+background-image: linear-gradient(to right, #ff4b4b, #d12280);
+display: flex;
+align-items: center;
+justify-content: center;
 }
-.rate {
+.rate input{
+display: none;
+}
+.rate label{
+	display: block;
+	cursor: pointer;
+	width: 50px;
+	background: #ccc;
+}
+.rate label:before{
+	content: '\f005';
+	font-family: fontawesome;
+	position: relative;
+	display: block;
+	font-size: 50px;
+  color: #101010;
+}
+.rate label:after{
+	content: '\f005';
+	font-family: fontawesome;
+	position: absolute;
+	display: block;
+	font-size: 50px;
+  color: #1f9cff;
+	top: 0;
+	opacity: 0;
+	transition: .5s;
+	text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+.rate label:hover:after,
+.rate input:hover ~ label:after,
+.rate input:checked ~ label:after
+{
+	opacity: 1;
+}
+.rating .fas{
+	font-size: 40px;
+	color: #e4e4e4;
+	cursor: pointer;
+}
+
+/*.rate {
     float: left;
     height: 46px;
     padding: 0 10px;
@@ -486,4 +537,48 @@ th:last-child{
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
     color: #c59b08;
+}*/
+/*about page*/
+.about-page{
+	margin: 80px auto;
+}
+body{
+  margin: 0;
+  text-align: center;
+  font-family: font-family: 'Merriweather', serif;
+}
+h1{
+  margin-top: 0;
+font-family: 'Sacramento', cursive;
+}
+h2{
+  font-family: 'Montserrat', sans-serif;
+}
+h3{
+  font-family: 'Montserrat', sans-serif;
+}
+.top-container{
+  background-color: skyblue;
+  position: relative;
+  padding: 100px;
+}
+.middle-container{
+
+}
+.bottom-container{
+
+}
+.bottom-cloud{
+  position: absolute;
+  left: 300px;
+  bottom: 300px;
+}
+.top-cloud{
+  position: absolute;
+  right: 300px;
+  top: 50px;
+}
+img{
+  height: 250px;
+
 }
